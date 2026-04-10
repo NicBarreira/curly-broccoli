@@ -1,0 +1,284 @@
+:root {
+    --bg-dark: #020205;
+    --neon-cyan: #00cec9;
+    --neon-purple: #6c5ce7;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* NEBULOSAS */
+.nebulosa-base {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(108, 92, 231, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+    filter: blur(100px);
+    z-index: -3;
+}
+
+.nebulosa-nuvem-1 {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(120px);
+    animation: drift 40s linear infinite;
+    z-index: -2;
+}
+
+.nebulosa-nuvem-2 {
+    position: fixed;
+    bottom: -20%;
+    right: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 206, 201, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    filter: blur(100px);
+    animation: drift 50s linear infinite alternate;
+    z-index: -2;
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(5, 5, 15, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.cyan-text {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--neon-cyan);
+}
+
+/* HERO / HOME */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.protocol-status {
+    margin-bottom: 25px;
+}
+
+#protocol-text {
+    font-family: 'Courier Prime', monospace;
+    color: var(--neon-cyan);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--neon-cyan);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+.welcome-box h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.bio-text {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+}
+
+.white-text {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 1px solid var(--neon-purple);
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0, 206, 201, 0.2);
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 206, 201, 0.4);
+}
+
+/* PROJETOS GRID */
+.projects-section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-cyan);
+}
+
+.mountains-section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mountains-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.mountain-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    transition: 0.4s;
+}
+
+.mountain-card:hover {
+    border-color: var(--neon-purple); /* Muda a cor pra diferenciar dos projetos */
+    transform: scale(1.05);
+}
+
+.mountain-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.mountain-card h4 {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.scanner-effect {
+    position: absolute;
+    top: -100%;
+    width: 1

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DigitalCodeHub</title>
+    <link rel="stylesheet" href="/frontend/public/src/assets/loginStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div> 
+    
+    <div class="login-container">
+        <div class="glow-accent"></div>
+        
+        <div class="header">
+            <i class="fas fa-user logo-icon"></i>
+            <h1 class="cyan-text">VISITOR ACCESS</h1>
+        </div>
+        
+        <form>
+
+            <div class="input-group">
+                <input type="text" placeholder="enter your name">
+            </div>
+
+            <div class="input-group password-group">
+                <input type="text" placeholder="Email Address"required>
+            </div>
+
+            <div class="gender-container">
+    <div class="gender-group">
+        <input type="radio" name="gender" id="male" value="male" checked>
+        <label for="male" class="gender-tile">
+            <i class="fas fa-mars"></i>
+            <span>Male</span>
+        </label>
+
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female" class="gender-tile">
+            <i class="fas fa-venus"></i>
+            <span>Female</span>
+        </label>
+
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other" class="gender-tile">
+            <i class="fas fa-transgender-alt"></i>
+            <span>Other</span>
+        </label>
+    </div>
+</div>
+            
+            <button type="button" id="btn-login" class="btn-login">LOGIN</button>
+            
+            <div class="divider">
+                <span>Or</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn"><i class="fab fa-google"></i></button>
+            </div>
+            
+
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/frontend/public/src/js/scriptLogin.js"></script>
+</body>
+</html>

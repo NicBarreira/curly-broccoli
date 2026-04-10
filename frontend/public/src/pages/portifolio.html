@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Freitas | Dashboard</title>
+    
+    <link rel="stylesheet" href="/frontend/public/src/assets/pagePortifolio.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    <div class="nebulosa-base"></div>
+    <div class="nebulosa-nuvem-1"></div>
+    <div class="nebulosa-nuvem-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">NICOLAS<span class="cyan-text"> FREITAS</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="#projetos" class="nav-item">Projetos</a></li>
+                <li><a href="#montanhas" class="nav-item">Montanhas</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="home" class="hero-section">
+            <div class="welcome-box">
+                
+                <div class="protocol-status">
+                    <span id="protocol-text">INICIALIZANDO...</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div id="hero-content" class="hidden">
+                    <h2 id="msg-boas-vindas"></h2>
+                    
+                    <div class="bio-text">
+                        <p>Eu sou o <span class="white-text">Nicolas Freitas</span>, um desenvolvedor Back-end apaixonado por tecnologia e por alcançar o topo — seja em uma montanha ou em um sistema complexo.</p>
+
+                        <p>Atualmente no 5º semestre de Ciência da Computação e estagiário na <span class="cyan-text">Saint-Gobain Sekurit</span>, atuo com Neptune DXP, JS e Python, mas meu foco é a robustez do ecossistema <span class="cyan-text">Java</span>. Movido por arquiteturas sólidas e escaláveis, estou me preparando para minha próxima subida: me tornar <span class="white-text">Desenvolvedor Java</span>.</p>
+
+                        <p>Quando não estou versionando código, estou em alguma trilha encarando novos picos. Afinal, tanto no <span class="cyan-text">Java</span> quanto no <span class="white-text">trekking</span>, a jornada exige resiliência, lógica e foco total no objetivo.</p>
+                    </div>
+
+                    <div class="home-actions">
+                        <a href="#projetos" class="btn-main">EXPLORAR PROJETOS <i class="fas fa-rocket"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projects-section">
+            <h3 class="section-title">MEUS <span class="cyan-text">PROJETOS</span></h3>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-info">
+                        <h3>Java Bank Engine</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        </div>
+                    <div class="card-footer">
+                        <button class="action-btn btn-like" title="Gostei!">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn btn-dislike" title="Não gostei">
+                            <i class="fas fa-heart-broken"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-info">
+                        <h3>@Barreira.Spec 307</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Automotive</span>
+                            <span class="tag">Modificações</span>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        </div>
+                    <div class="card-footer">
+                        <button class="action-btn btn-like"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn btn-dislike"><i class="fas fa-heart-broken"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="montanhas" class="mountains-section">
+    <h3 class="section-title">MINHAS <span class="cyan-text">CONQUISTAS</span></h3>
+    
+    <div class="mountains-grid">
+
+        <div class="mountain-card">
+            <div class="mountain-info">
+                <i class="fas fa-mountain cyan-text"></i>
+                <h4>travessia rancho caido</h4>
+                <p>Status: <span class="white-text">Missão Cumprida</span></p>
+            </div>
+            <div class="mountain-preview">
+                </div>
+        </div>
+
+        <div class="mountain-card">
+            <div class="mountain-info">
+                <i class="fas fa-mountain cyan-text"></i>
+                <h4>Pico do Itaguaré</h4>
+                <p>Status: <span class="white-text">Próximo Alvo (25/04)</span></p>
+            </div>
+            <div class="mountain-preview">
+                </div>
+        </div>
+
+        <div class="mountain-card">
+            <div class="mountain-info">
+                <i class="fas fa-route cyan-text"></i>
+                <h4>Pedra da Mina</h4>
+                <p>Status: <span class="white-text">Próximo Alvo (Ago)</span></p>
+            </div>
+            <div class="mountain-preview"></div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Barreira.Pro - Desenvolvido com muito "Juice".</p>
+    </footer>
+
+    <script src="/frontend/public/src/js/scriptPortifolio.js"></script>
+</body>
+</html>

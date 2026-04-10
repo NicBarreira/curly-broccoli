@@ -1,0 +1,214 @@
+/* Reset Básico */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte Tech */
+}
+
+body {
+    background-color: #080810; /* Espaço profundo */
+    overflow: hidden; height: 100vh; width: 100vw;
+    display: flex; justify-content: center; align-items: center;
+}
+
+/* --- FUNDO DE PARTÍCULAS (O "Juice" de Espaço) --- */
+#particles-js {
+    position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+    z-index: 1; /* Fica atrás do card */
+}
+
+/* --- O CARD DE LOGIN (Glassmorphism Galáctico) --- */
+.login-container {
+    background-color: rgba(26, 26, 46, 0.4); /* Transparência profunda */
+    backdrop-filter: blur(25px); /* Efeito de vidro */
+    position: relative;
+    max-width: 450px; width: 90%;
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid rgba(108, 92, 231, 0.2); /* Borda roxa suave */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Fica na frente das partículas */
+}
+
+/* --- O ACENTO DE BRILHO NEON ROXO (Top-Left) --- */
+.glow-accent {
+    position: absolute;
+    top: -50px; left: -50px;
+    width: 150px; height: 150px;
+    background-color: #3a24d5; /* Roxo vibrante */
+    border-radius: 50%;
+    filter: blur(80px); /* Suavizar o brilho */
+    z-index: -1;
+}
+
+.header {
+    text-align: center; margin-bottom: 40px;
+}
+
+
+.logo-icon {
+    font-size: 3rem; margin-bottom: 10px;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9); /* Roxo para Ciano */
+    -webkit-background-clip: text; color: transparent; /* Ícone com degradê */
+    display: inline-block; /* Necessário para o gradient no texto/ícone funcionar */
+}
+
+
+
+.login-container h1 {
+    font-size: 1.8rem; font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* --- TEXTO CIANO NEON (Acentos de Galáxia) --- */
+.cyan-text {
+    color: #00cec9;
+}
+
+form {
+    display: flex; flex-direction: column; gap: 20px;
+}
+
+/* --- INPUTS ESTILIZADOS COM BORDAS ARREDONDADAS --- */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #30304a; /* Fundo escuro */
+    border: none; border-radius: 12px;
+    color: white; font-size: 1rem;
+    outline: none; transition: 0.3s;
+}
+
+/* Interação do input (Focus) - Brilho Neon Ciano */
+.input-group input:focus {
+    box-shadow: 0 0 10px rgba(0, 206, 201, 0.6);
+}
+
+.input-group input::placeholder {
+    color: #a0a0b0; /* Placeholder mais escuro */
+}
+
+.gender-container {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.label-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.gender-group {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* Esconde o rádio padrão */
+.gender-group input[type="radio"] {
+    display: none;
+}
+
+/* Estilo da "Pílula" (Botão) */
+.gender-tile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.gender-tile i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.gender-tile span {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- O JUICE: Quando o rádio está checado, o label vizinho brilha --- */
+.gender-group input[type="radio"]:checked + .gender-tile {
+    background: rgba(0, 206, 201, 0.15);
+    border-color: #00cec9;
+    color: #00cec9;
+    box-shadow: 0 0 15px rgba(0, 206, 201, 0.4);
+    transform: translateY(-2px);
+}
+
+.gender-tile:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #6c5ce7, #00cec9); /* Roxo para Ciano */
+    border: none; border-radius: 12px;
+    color: white; padding: 15px;
+    font-size: 1.1rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 20px rgba(0, 206, 201, 0.8); /* Brilho neon no hover */
+    transform: translateY(-2px);
+}
+
+.divider {
+    text-align: center; position: relative; margin: 20px 0;
+}
+
+.divider span {
+    background-color: transparent; /* Para não cobrir a linha */
+    padding: 0 10px; color: #a0a0b0; font-size: 0.9rem;
+}
+
+.divider::before, .divider::after {
+    content: ''; position: absolute;
+    top: 50%; transform: translateY(-50%);
+    width: 42%; height: 1px;
+    background-color: #30304a;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.social-login {
+    display: flex; justify-content: center; gap: 15px;
+}
+
+.social-btn {
+    background-color: #30304a;
+    border: none; border-radius: 50%;
+    width: 50px; height: 50px;
+    color: #a0a0b0; font-size: 1.2rem;
+    cursor: pointer; transition: 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #a0a0b0; color: #30304a;
+}
+
+.signup-footer {
+    text-align: center; font-size: 0.9rem; color: #e0e0f0;
+}
+
+.signup-link {
+    text-decoration: none; font-weight: 700;
+}
