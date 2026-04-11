@@ -1,0 +1,25 @@
+# Compilação e Build
+target/
+!.mvn/wrapper/maven-wrapper.jar
+build/
+
+# Meus segredos da Aiven
+application-local.properties
+
+# IDEs (VS Code, IntelliJ, Eclipse)
+.vscode/
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
+.nb-gradle/
+
+# Log e Temporários
+*.log
+tmp/
+
+# Sistema
+.DS_Store
+Thumbs.db
